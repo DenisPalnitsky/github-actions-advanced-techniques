@@ -29,7 +29,6 @@ jobs:
       - name: Log in to the Container registry
         uses: docker/login-action@v3.2.0
         with:
-          registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -42,4 +41,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: github-actins-tips:latest
+          tags:  ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest
