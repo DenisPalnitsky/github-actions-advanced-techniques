@@ -1,0 +1,19 @@
+name: build
+on: [ workflow_dispatch ]
+    
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Init vars
+        id: custom-action
+        uses: github.com/${{ github.repository_owner }}/custom-action/.github/actions/git-vars
+
+      - name: Print result
+        run: |
+            echo "Result: ${{ steps.custom-action.outputs.sha-short }}"
