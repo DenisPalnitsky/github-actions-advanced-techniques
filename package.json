@@ -1,0 +1,48 @@
+{
+    "name": "my-app",
+    "version": "1.0.0",
+    "description": "A simple Node.js app",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": ["node", "express", "docker"],
+    "author": "Your Name",
+    "license": "ISC",
+    "dependencies": {
+        "@dqbd/tiktoken": "^1.0.2",
+        "@sentry/nextjs": "^7.53.0",
+        "@tabler/icons-react": "^2.9.0",
+        "dd-trace": "^4.0.0",
+        "eventsource-parser": "^0.1.0",
+        "i18next": "^22.4.13",
+        "moment": "^2.29.4",
+        "mysql2": "^3.6.5",
+        "next": "13.2.4",
+        "next-auth": "^4.22.1",
+        "next-i18next": "^13.2.2",
+        "nextjs-google-analytics": "^2.3.3",
+        "openai": "^3.2.1",
+        "puppeteer": "^21.7.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-hot-toast": "^2.4.0",
+        "react-i18next": "^12.2.0",
+        "react-markdown": "^8.0.5",
+        "react-query": "^3.39.3",
+        "react-syntax-highlighter": "^15.5.0",
+        "rehype-mathjax": "^4.0.2",
+        "remark-gfm": "^3.0.1",
+        "remark-math": "^5.1.1",
+        "use-local-storage-state": "^19.1.0",
+        "uuid": "^9.0.1",
+        "cypress": "^8.3.1",
+        "electron": "^15.0.0",
+        "phantomjs-prebuilt": "^2.1.16",
+        "webpack": "^5.52.1"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.7"
+    }
+  }
