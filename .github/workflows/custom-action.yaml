@@ -11,7 +11,8 @@ jobs:
 
       - name: Init vars
         id: custom-action
-        uses: denispalnitsky/custom-action@main
+        # this is our custom action's repository name and branch that we want to use
+        uses: denispalnitsky/custom-github-action@main
 
       - name: Print result
         run: |
