@@ -12,7 +12,7 @@ jobs:
 
       - name: Init vars
         id: custom-action
-        uses: ${{ github.repository_owner }}/custom-action/.github/actions/git-vars
+        uses: ${{ github.repository_owner }}/custom-action@main
 
       - name: Print result
         run: |
