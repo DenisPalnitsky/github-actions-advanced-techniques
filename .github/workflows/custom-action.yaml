@@ -11,7 +11,7 @@ jobs:
 
       - name: Init vars
         id: custom-action
-        uses: ${{ github.repository_owner }}/custom-action@main
+        uses: denispalnitsky/custom-action@main
 
       - name: Print result
         run: |

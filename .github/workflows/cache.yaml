@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     # this action pulls from the cache and pushes to the cache at the end of the job
     - name: Cache node modules
