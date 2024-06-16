@@ -1,6 +1,5 @@
-name: build
+name: Custom Action Example
 on: [ workflow_dispatch ]
-    
 
 jobs:
   build-and-test:
