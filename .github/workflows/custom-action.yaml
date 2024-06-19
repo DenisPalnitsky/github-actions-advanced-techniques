@@ -5,15 +5,14 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Init vars
+      - name: Use custom action
         id: custom-action
         # this is our custom action's repository name and branch that we want to use
         uses: denispalnitsky/custom-github-action@main
 
       - name: Print result
         run: |
-            echo "Result: ${{ steps.custom-action.outputs.sha-short }}"
+            echo "Short sha of current commit: ${{ steps.custom-action.outputs.sha-short }}"
