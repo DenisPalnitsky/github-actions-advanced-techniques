@@ -3,7 +3,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  executing-workflow-job:
+  job-from-caller-workflow:
+    runs-on: ubuntu-latest 
+    steps:
+      - run: echo "Hello from the job in the calling workflow"
+
+  executing-reusable-workflow:
     # Url structure [owner]/[repo]/.github/workflows/[workflow].yaml@[branch/tag/commit]
     uses: denispalnitsky/custom-github-action/.github/workflows/reusable-workflow.yaml@main
     with:
