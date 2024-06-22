@@ -1,0 +1,25 @@
+name: Call a reusable workflow and use its outputs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  executing-workflow-job:
+    # Url structure [owner]/[repo]/.github/workflows/[workflow].yaml@[branch/tag/commit]
+    uses: denispalnitsky/custom-github-action/.github/workflows/reusable-workflow.yaml@main
+    with:
+      message-to-print: "Hello from the executing workflow job"
+    secrets:    
+      # we can pass secret directly 
+      # secret-to-hide: ${{ secrets.secret-to-hide }}
+      
+      # or inherit all secrets from the parent workflow
+      secrets: inherit      
+
+
+
+  showing-outputs-job:
+    runs-on: ubuntu-latest
+    needs: executing-workflow-job
+    steps:
+      - run: echo ${{ needs.executing-workflow-job.outputs.workflow-output }} 
