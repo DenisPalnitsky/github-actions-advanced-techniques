@@ -8,14 +8,16 @@ jobs:
     uses: denispalnitsky/custom-github-action/.github/workflows/reusable-workflow.yaml@main
     with:
       message-to-print: "Hello from the executing workflow job"
-    secrets:    
-      # we can pass secret directly 
-      # secret-to-hide: ${{ secrets.secret-to-hide }}
-      
-      # or inherit all secrets from the parent workflow 
+    secrets: inherit
+      # Inherit all secrets from the parent workflow 
       # make sure you have a secret defined in calling workflow with the same name
       # in this case,  I have `secret-to-hide` secret with value `MY SECRET MESSAGE`
-      secrets: inherit      
+
+      # or we can set secrets explicitly
+      # secret-to-hide: ${{ secrets.secret-to-hide }}
+      
+      
+      
 
 
 
