@@ -23,6 +23,6 @@ jobs:
 
   showing-outputs-job:
     runs-on: ubuntu-latest
-    needs: executing-workflow-job
+    needs: executing-reusable-workflow
     steps:
       - run: echo "${{ needs.executing-workflow-job.outputs.workflow-output }}"
