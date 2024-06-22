@@ -1,5 +1,4 @@
-name: Call a reusable workflow and use its outputs
-
+name: Reusable Workflow Example
 on:
   workflow_dispatch:
 
