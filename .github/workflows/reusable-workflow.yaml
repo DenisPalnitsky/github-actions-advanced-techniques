@@ -15,11 +15,6 @@ jobs:
 
       # or we can set secrets explicitly
       # secret-to-hide: ${{ secrets.secret-to-hide }}
-      
-      
-      
-
-
 
   showing-outputs-job:
     runs-on: ubuntu-latest
